@@ -6,6 +6,7 @@ The goal of this track is to **forecast future strokes including shot types and 
 ## :badminton:	prerequisite
 * Coding environment: VS Code 
 * Packages version: python 3.11 
+
 ## Usage
 #### Train a model
 ```=bash
@@ -14,19 +15,26 @@ The goal of this track is to **forecast future strokes including shot types and 
 #### Generate predictions
 ```=bash
 python generator.py {model_path}
-
+```
 #### Run evaluation metrics
 - Both ground truth and prediction files are default in the `data` folder
 ```=bash
 python evaluation.py
 ```
 
+## :badminton:	Hyperparameters 
+*seed_value: 42
+*max_ball_round: 70
+*encode_length: 4
+*batch_size: 16
+*lr: 1e-4
+*epochs: 150
+*shot_dim: 256
+*area_num: 5
+*area_dim: 256
+*player_dim: 256
+*encode_dim: 256
 
-## :badminton:	Problem Definition
-
-Let $R=\{S_r, P_r\}_{r=1}^{|R|}$ denote historical rallies of badminton matches, where the $r$-th rally is composed of a stroke sequence with type-area pairs $S_r=(\langle s_1, a_1\rangle,\cdots,\langle s_{|S_r|}, a_{|S_r|}\rangle)$ and a player sequence $P_r=(p_1,\cdots,p_{|S_r|})$.
-At the $i$-th stroke, $s_i$ represents the shot type, $a_i=\langle x_i, y_i\rangle \in \mathbb{R}^{2}$ are the coordinates of the shuttle destinations, and $p_i$ is the player who hits the shuttle. We denote Player A as the served player and Player B as the other for each rally in track2. For instance, given a singles rally between Player A and Player B, $P_r$ may become $(A, B, \cdots, A, B)$.
-We formulate the problem of stroke forecasting as follows. For each rally, given the observed $\tau$ strokes $(\langle s_i, a_i\rangle)_{i=1}^{\tau}$ with players $(p_i)_{i=1}^{\tau}$, the goal is to predict the future strokes including shot types and area coordinates for the next $n$ steps, i.e., $(\langle s_i, a_i\rangle)_{i={\tau+1}}^{\tau+n}$.
 
 ## :badminton:	Evaluation Metrics
 
