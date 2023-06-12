@@ -46,3 +46,4 @@ python evaluation.py
 * encode_dim: 256
 
 ## :badminton:	Experiment Results
+![image] (https://github.com/derricko722/AI-Final-Project/blob/main/loss.png)
