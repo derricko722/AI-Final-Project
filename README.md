@@ -23,28 +23,27 @@ python evaluation.py
 ```
 
 ## :badminton:	Hyperparameters 
-*seed_value: 42
+* seed_value: 42
 
-*max_ball_round: 70
+* max_ball_round: 70
 
-*encode_length: 4
+* encode_length: 4
 
-*batch_size: 16
+* batch_size: 16
 
-*lr: 1e-4
+* lr: 1e-4
 
-*epochs: 150
+* epochs: 150
 
-*shot_dim: 256
+* shot_dim: 256
 
-*area_num: 5
+* area_num: 5
 
-*area_dim: 256
+* area_dim: 256
 
-*player_dim: 256
+* player_dim: 256
 
-*encode_dim: 256
-
+* encode_dim: 256
 
 ## :badminton:	Evaluation Metrics
 
