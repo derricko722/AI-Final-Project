@@ -47,3 +47,4 @@ python evaluation.py
 
 ## :badminton:	Experiment Results
 ![image](https://github.com/derricko722/AI-Final-Project/blob/main/loss.png)
+https://github.com/derricko722/AI-Final-Project/blob/main/prediction.csv
