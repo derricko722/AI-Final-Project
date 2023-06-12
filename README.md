@@ -45,20 +45,4 @@ python evaluation.py
 
 * encode_dim: 256
 
-## :badminton:	Evaluation Metrics
-
-$$ 
-\begin{flalign}
-&Score = min(l_1, l_2, ..., l_6)&
-\end{flalign}
-$$
-
-$$ 
-\begin{flalign}
-l_i = AVG(CE + MAE)&
-= \frac{ \sum_{r=1}^{|R|} \sum_{n=\tau+1}^{|r|} [S_n log \hat{S_n} + (|x_n-\hat{x_n}|+|y_n-\hat{y_n}|)]} {|R|\cdot(|r|-\tau)} &
-\end{flalign}
-$$
-
-
-## :badminton:	Experiment Result
+## :badminton:	Experiment Results
